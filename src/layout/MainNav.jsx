@@ -24,34 +24,31 @@ const MainNav = () => {
   return (
     <div className="w-full bg-[#fff]">
       <Container>
-        <div className="w-full py-1 flex justify-between items-center">
+        <div className="w-full py-4 flex justify-between items-center">
+          <div className="mainNav">
+            <Navlinks />
+          </div>
+
           <div>
-            {/* <img
-              src="https://e7.pngegg.com/pngimages/531/692/png-clipart-logo-graphic-design-art-online-shop-angle-text.png"
-              className="w-[120px]"
-              alt=""
-            /> */}
-            <p className="text-[35px] font-bold">
+            <p className="font-bold main-logo">
               <span className="text-[#2d3a4b]">E-STORE</span>
             </p>
           </div>
 
-          <div className="mainNav">
-            <Navlinks />
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="relative">
-              <ImCart className="cursor-pointer" />
-              <span className="absolute top-[-17px] right-[0px]"></span>
-            </div>
-            <div>
-              <IoMdSearch className="text-[20px] header-main-btn  cursor-pointer" />
-            </div>
+          <div className="flex items-center gap-4">
             <span className="">
               <NavLink to={"/login"}>
-                <FaUser />
+                <FaUser className="text-[18px]" />
               </NavLink>
             </span>
+            <div>
+              <IoMdSearch className="text-[22px] header-main-btn  cursor-pointer" />
+            </div>
+            <div className="relative">
+              <ImCart className="cursor-pointer text-[18px]" />
+              <span className="absolute top-[-17px] right-[0px]"></span>
+            </div>
+
             <GiHamburgerMenu
               onClick={handleClick}
               className="text-[25px] hidden menu-toggle-btn cursor-pointer"

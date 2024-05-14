@@ -32,6 +32,14 @@
   color: #f6aa28;
 }
 
+.primary-background-color {
+  background-color: #000;
+}
+
+.secondary-background-color {
+  background: #262b2c;
+}
+
 .secondary-text-color {
   color: #262b2c;
 }
@@ -46,9 +54,27 @@
   transition: width 0.3s;
 }
 
+.main-logo {
+  margin-left: -78%;
+  font-size: 30px;
+}
+
 .main-navigation-links:hover::after {
   width: 100%;
   transition: width 0.3s;
+}
+
+/* .main-nav-with-child */
+
+.main-child-nav {
+  transition: 0.5s all ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.main-nav-with-child:hover .main-child-nav {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ######### Home ######## */
@@ -143,6 +169,9 @@
   }
   .menu-toggle-btn {
     display: block;
+  }
+  .main-logo {
+    margin-left: 0%;
   }
 }
 

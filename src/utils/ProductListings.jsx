@@ -1,14 +1,12 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 
-const ProductListings = ({ title, products }) => {
+const ProductListings = ({ title, products, subTitle }) => {
   return (
     <div className="w-full my-[100px]">
-      <div className="flex justify-between">
-        <p className="text-[25px] font-[500]">{title}</p>
-        <p className="content underline decoration-[#f6aa28] cursor-pointer">
-          VIEW ALL {title}
-        </p>
+      <div className="w-full text-center secondary-text-color">
+        <p className="text-[35px] font-[500]">{title}</p>
+        <p className="text-[20px] cursor-pointer">{subTitle}</p>
       </div>
       <div className="mt-[50px] best-seller-product-listing">
         {producs.map((product) => {

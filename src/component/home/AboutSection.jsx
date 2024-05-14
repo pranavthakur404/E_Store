@@ -15,7 +15,7 @@ const AboutSection = () => {
               alt=""
             />
           </div>
-          <div className="w-[100%] md:w-[48%] flex flex-col justify-center">
+          <div className="w-[100%] md:w-[48%] flex flex-col justify-center secondary-text-color">
             <h5 className="primary-text-color ">About Us</h5>
             <h3 className="section-heading font-[500] my-2">
               Selected materials designed for comfort and sustainability

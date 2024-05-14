@@ -18,7 +18,7 @@ const About2 = () => {
             className="w-[50%] md:w-[300px] md:absolute right-5 bottom-0 z-[-1]"
           />
         </div>
-        <div className="w-full md:w-[50%] p-2 md:p-5">
+        <div className="w-full md:w-[50%] p-2 md:p-5 secondary-text-color">
           <h3 className="text-[24px] font-[700]">
             Everything you need. Nothing you don't.
           </h3>
