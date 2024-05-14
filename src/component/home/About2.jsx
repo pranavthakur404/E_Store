@@ -5,20 +5,20 @@ import Container from "../../utils/Container";
 const About2 = () => {
   return (
     <Container>
-      <div className="w-full flex justify-between my-[100px]">
-        <div className="w-[50%] relative">
+      <div className="w-full flex flex-wrap justify-between my-[100px]">
+        <div className="w-full md:w-[50%] flex justify-between md:block  relative">
           <img
             src="https://myrite.co/cdn/shop/files/people_gut_health_360x.jpg?v=1711524519"
             alt=""
-            className="w-[300px] absolute left-5 z-0"
+            className="w-[50%] md:w-[300px] md:absolute left-5 z-0"
           />
           <img
             src="https://myrite.co/cdn/shop/files/gummies_and_gut_health_360x.jpg?v=1711524535"
             alt=""
-            className="w-[300px] absolute right-5 bottom-0 z-[-1]"
+            className="w-[50%] md:w-[300px] md:absolute right-5 bottom-0 z-[-1]"
           />
         </div>
-        <div className="w-[50%] p-5">
+        <div className="w-full md:w-[50%] p-2 md:p-5">
           <h3 className="text-[24px] font-[700]">
             Everything you need. Nothing you don't.
           </h3>

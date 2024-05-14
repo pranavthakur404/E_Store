@@ -74,4 +74,9 @@ const navLinks = [
     title: "Blog",
     to: "/blog",
   },
+  {
+    id: 6,
+    title: "Account",
+    to: "/account",
+  },
 ];

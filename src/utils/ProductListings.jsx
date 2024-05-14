@@ -32,7 +32,7 @@ const producs = [
   },
   {
     id: 2,
-    img: "https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-016-400x400.jpg",
+    img: "https://myrite.co/cdn/shop/files/GutHealthStarterpack_15_460x.jpg?v=1715076901",
     title: "Men's Classic Blue",
     rating: "3",
     price: "79.90",
@@ -40,7 +40,7 @@ const producs = [
   },
   {
     id: 3,
-    img: "https://websitedemos.net/recycled-shoe-store-04/wp-content/uploads/sites/983/2021/11/recycled-shoe-product-image-015-400x400.jpg",
+    img: "https://myrite.co/cdn/shop/files/Rite-Gummies-Balance-Fruit_460x.jpg?v=1706354271",
     title: "Men's Classic Blue",
     rating: "3",
     price: "79.90",

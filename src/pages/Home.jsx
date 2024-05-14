@@ -24,7 +24,6 @@ const Home = () => {
         <ProductListings title={"Best Seller"} />
       </Container>
       <CategorySection />
-
       <Container>
         <ProductListings title={"New Arrivals"} />
       </Container>

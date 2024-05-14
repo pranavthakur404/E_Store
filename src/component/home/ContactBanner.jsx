@@ -9,7 +9,7 @@ const ContactBanner = () => {
       <Container>
         <div className="w-full flex text-center justify-center items-center py-[7%] ">
           <div>
-            <h3 className="text-[45px] font-[700] text-[#262b2c]">
+            <h3 className="sm:text-[35px] md:text-[45px] font-[700] text-[#262b2c]">
               Get In Touch
             </h3>
             <input
