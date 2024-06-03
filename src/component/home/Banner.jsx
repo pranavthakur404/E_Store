@@ -24,13 +24,13 @@ const Banner = () => {
                   // You can add more background-related styles as needed
                 }}
               >
-                <div className="text-[#fff] relative z-[2] ml-[7%]">
+                {/* <div className="text-[#fff] relative z-[2] ml-[7%]">
                   <p className="text-[20px] md:text-[45px]">EXCLUSIVE</p>
                   <h1 className="text-[25px] md:text-[55px] font-bold mb-5">
                     {data.title}
                   </h1>
                   <Button text={"SHOP NOW"} />
-                </div>
+                </div> */}
               </div>
             </SwiperSlide>
           );
@@ -46,13 +46,13 @@ const bannerData = [
   {
     id: 1,
     image:
-      "https://previews.123rf.com/images/kritchanut/kritchanut1811/kritchanut181100357/114004200-black-shopping-basket-full-of-food-and-groceries-in-suppermarket-aisle-banner-background-with-copy.jpg",
+      "https://www.fablestreet.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0486%2F0634%2F7416%2Ffiles%2FbannerFile-1717178161585.jpg%3Fv%3D1717178166&w=1920&q=75",
     title: "NEW SHOES",
   },
   {
     id: 2,
     image:
-      "https://t4.ftcdn.net/jpg/02/30/72/41/360_F_230724124_ZWlHSZBIvqvdJQj9at15WaKRqAtCUKTu.jpg",
+      "https://www.fablestreet.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0486%2F0634%2F7416%2Ffiles%2FbannerFile-1717224463879.png%3Fv%3D1717224468&w=1920&q=75",
     title: "NEW SHOES",
   },
 ];

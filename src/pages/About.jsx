@@ -5,6 +5,7 @@ import Feature from "../component/about/Feature";
 import AboutSection from "../component/about/AboutSection";
 import TeamSection from "../component/about/TeamSection";
 import BlogSection from "../component/about/BlogSection";
+import RightContent from "../utils/RightContent";
 
 const About = () => {
   return (
@@ -16,6 +17,7 @@ const About = () => {
         }
       />
       <AboutSection />
+      {/* <RightContent img={} title={} para={} /> */}
       <Feature />
       <TeamSection />
       <BlogSection />

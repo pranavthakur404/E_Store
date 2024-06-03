@@ -1,67 +1,46 @@
 import React from "react";
-
+import { Swiper, SwiperSlide } from "swiper/react";
 import Container from "../../utils/Container";
-import Slider from "react-slick";
+
+import "swiper/css/navigation";
+// import required modules
+import { Navigation } from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
 
 const CategorySection = () => {
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
   return (
-    <Container>
-      <div className="w-full overflow-hidden">
-        <div className="w-full text-center secondary-text-color">
-          <p className="text-[35px] font-[500]">{"Shop by SOLUTION"}</p>
-          <p className="text-[20px] cursor-pointer">
-            {"Find the best benefits that fit your needs!"}
-          </p>
-        </div>
-        <div className="mt-10">
-          <Slider {...settings}>
-            {data.map((list) => {
-              return (
+    <div className="w-[80%] my-0 mx-auto my-10">
+      <Container>
+        <Swiper
+          slidesPerView={7}
+          spaceBetween={30}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
+          {data.map((list) => {
+            return (
+              <SwiperSlide>
                 <div key={list.id} className="w-full overflow-hidden">
                   <img
                     src={list.img}
-                    className="w-[90%] h-[250px]  block my-0 mx-auto"
+                    className="w-[100%] block my-0 mx-auto"
                     alt={list.title}
                   />
                   <div className="text-center py-2">
-                    <p className="text-[16px] my-2 font-[500]">{list.title}</p>
-                    <button className="secondary-background-color text-[12px] text-[#fff] py-2 px-4 rounded-lg ">
-                      LEARN MORE
-                    </button>
+                    <p className="text-[12px] my-2">{list.title}</p>
                   </div>
                 </div>
-              );
-            })}
-          </Slider>
-        </div>
-        <div className="w-full flex justify-center items-center mt-5"></div>
-      </div>
-    </Container>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </Container>
+    </div>
   );
 };
 
@@ -70,42 +49,42 @@ export default CategorySection;
 const data = [
   {
     id: 1,
-    title: "Category 1",
-    img: "https://myrite.co/cdn/shop/files/Bianca_5491a54e-8e9d-4817-b58a-effeb509c00f_540x.png?v=1694271227",
+    title: "Livin",
+    img: "https://www.fablestreet.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0486%2F0634%2F7416%2Ffiles%2Flivin_70a0b973-4c89-4c27-92ec-5b2410f7e1e4_x300.png%3Fv%3D1710741112&w=1920&q=75",
   },
   {
     id: 2,
-    title: "Category 2",
-    img: "https://myrite.co/cdn/shop/files/Balance_Category_square_460x.jpg?v=1675926965",
+    title: "Tops",
+    img: "https://www.fablestreet.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0486%2F0634%2F7416%2Ffiles%2Ftops_a175344f-2aa8-4f52-af46-ebc24840208c_x300.png%3Fv%3D1710741112&w=1920&q=75",
   },
   {
     id: 3,
-    title: "Category 3",
-    img: "https://myrite.co/cdn/shop/files/Gummies--Balance-6PCS_540x.jpg?v=1706354034",
+    title: "Dresses",
+    img: "https://www.fablestreet.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0486%2F0634%2F7416%2Ffiles%2Fdresses_5a1613a5-0c79-426f-bba4-22d448118e2a_x300.png%3Fv%3D1710741112&w=1920&q=75",
   },
   {
     id: 4,
-    title: "Category 4",
-    img: "https://myrite.co/cdn/shop/files/Gift-Set--Balance_540x.jpg?v=1706354223",
+    title: "Shirts",
+    img: "https://www.fablestreet.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0486%2F0634%2F7416%2Ffiles%2FShirts_29b325eb-257c-4bff-a3dc-25581b4d7fd4_x300.png%3Fv%3D1710741112&w=1920&q=75",
   },
   {
     id: 5,
-    title: "Category 1",
-    img: "https://myrite.co/cdn/shop/files/Bianca_5491a54e-8e9d-4817-b58a-effeb509c00f_540x.png?v=1694271227",
+    title: "Tees",
+    img: "https://www.fablestreet.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0486%2F0634%2F7416%2Ffiles%2Ftees_af553117-e5a1-4dc1-98b1-2e63347cf0ac_x300.png%3Fv%3D1710741112&w=1920&q=75",
   },
   {
     id: 6,
-    title: "Category 2",
-    img: "https://myrite.co/cdn/shop/files/Balance_Category_square_460x.jpg?v=1675926965",
+    title: "Trousers",
+    img: "https://www.fablestreet.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0486%2F0634%2F7416%2Ffiles%2Ftrousers_5aa08997-c218-45f3-b899-a0a254c56dfd_x300.png%3Fv%3D1710741112&w=1920&q=75",
   },
   {
     id: 7,
-    title: "Category 3",
-    img: "https://myrite.co/cdn/shop/files/Gummies--Balance-6PCS_540x.jpg?v=1706354034",
+    title: "Skirts",
+    img: "https://www.fablestreet.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0486%2F0634%2F7416%2Ffiles%2Fskirts_e535fc54-332c-4537-b0ac-046e2887d1fa_x300.png%3Fv%3D1710741113&w=1920&q=75",
   },
   {
     id: 8,
-    title: "Category 4",
-    img: "https://myrite.co/cdn/shop/files/Gift-Set--Balance_540x.jpg?v=1706354223",
+    title: "Shorts",
+    img: "https://www.fablestreet.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0486%2F0634%2F7416%2Ffiles%2Fskorts_00bc8e38-1bbe-464b-a502-e55ab0bf63b9_x300.png%3Fv%3D1710741112&w=1920&q=75",
   },
 ];
