@@ -12,11 +12,13 @@ import store from "./store";
 import Root from "./root/Root";
 import Loading from "./utils/Loading";
 const Home = React.lazy(() => import("./pages/Home"));
+const Products = React.lazy(() => import("./pages/Products"));
+
+// Bellow to be changed
 const About = React.lazy(() => import("./pages/About"));
 const Contact = React.lazy(() => import("./pages/ContactUs"));
 const Login = React.lazy(() => import("./pages/Login"));
 const Signup = React.lazy(() => import("./pages/Signup"));
-const ProductDetails = React.lazy(() => import("./pages/ProductDetails"));
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <Home />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/products",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Products />
           </Suspense>
         ),
       },
@@ -60,14 +70,6 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <Signup />
-          </Suspense>
-        ),
-      },
-      {
-        path: "product-details",
-        element: (
-          <Suspense fallback={<Loading />}>
-            <ProductDetails />
           </Suspense>
         ),
       },

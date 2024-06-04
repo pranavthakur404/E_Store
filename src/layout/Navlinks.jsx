@@ -34,11 +34,23 @@ const Navlinks = () => {
           </NavLink>
           <div className="absolute main-child-nav z-[2] bg-[#fff] min-w-max py-5 px-5 gap-10 top-[50px] shadow-xl">
             <div className="mr-10">
-              <p className="text-[13px] my-2">Summer 2024</p>
-              <p className="text-[13px] my-2">Whites</p>
-              <p className="text-[13px] my-2">Modern Workwear</p>
-              <p className="text-[13px] my-2">Livin Pants</p>
-              <p className="text-[13px] my-2">View All</p>
+              <p className="text-[13px] my-2">
+                <NavLink to="/products?summer-2024">Summer 2024</NavLink>
+              </p>
+              <p className="text-[13px] my-2">
+                <NavLink to="/products?whites">Whites</NavLink>
+              </p>
+              <p className="text-[13px] my-2">
+                <NavLink to="/products?modern-workwear">
+                  Modern Workwear
+                </NavLink>
+              </p>
+              <p className="text-[13px] my-2">
+                <NavLink to="/products?livin-paints">Livin Pants</NavLink>
+              </p>
+              <p className="text-[13px] my-2">
+                <NavLink to="/products?All">View All</NavLink>
+              </p>
             </div>
           </div>
         </li>

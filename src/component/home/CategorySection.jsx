@@ -10,7 +10,7 @@ import "swiper/css";
 
 const CategorySection = () => {
   return (
-    <div className="w-[80%] my-0 mx-auto my-10">
+    <div className="w-[80%] mx-auto my-10">
       <Container>
         <Swiper
           slidesPerView={7}
@@ -19,6 +19,24 @@ const CategorySection = () => {
             clickable: true,
           }}
           navigation={true}
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            950: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 7,
+              spaceBetween: 50,
+            },
+          }}
           modules={[Navigation]}
           className="mySwiper"
         >

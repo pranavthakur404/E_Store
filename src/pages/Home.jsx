@@ -1,29 +1,24 @@
 import React from "react";
 
 import Banner from "../component/home/Banner";
-import AboutSection from "../component/home/AboutSection";
-import ProductListings from "../utils/ProductListings";
-import Container from "../utils/Container";
 import CategorySection from "../component/home/CategorySection";
-import TwoCategorySection from "../component/home/TwoCategorySection";
-import FeatureSection from "../component/home/FeatureSection";
-import ContactBanner from "../component/home/ContactBanner";
-import About5 from "../component/home/About5";
+
 import BestSeller from "../component/home/BestSeller";
+import ShopByOcasion from "../component/home/ShopByOcasion";
+import BottomOfferBanner from "../component/home/BottomOfferBanner";
+import MainCategorySection from "../component/home/MainCategorySection";
+import NewArrivalSection from "../component/home/NewArrivalSection";
 
 const Home = () => {
   return (
     <>
       <Banner />
       <CategorySection />
-      <AboutSection />
+      <NewArrivalSection />
       <BestSeller />
-
-      {/* Below to be removed */}
-      <About5 />
-      <TwoCategorySection />
-      <FeatureSection />
-      <ContactBanner />
+      <ShopByOcasion />
+      <BottomOfferBanner />
+      <MainCategorySection />
     </>
   );
 };

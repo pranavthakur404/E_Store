@@ -4,7 +4,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { toggle } from "../features/ToggleOver";
 import { IoMdClose } from "react-icons/io";
-import { NavLink } from "react-router-dom";
+
+import MobileNavLinks from "./MobileNavLinks";
 
 const MobileNav = () => {
   const dispatch = useDispatch();
@@ -19,26 +20,25 @@ const MobileNav = () => {
 
   return (
     <div
-      className={`w-[300px] fixed ${
+      className={`w-[300px] fixed px-2 ${
         isMobileOpen ? "left-0" : "left-[-300px]"
       } top-0 left-0 h-[100vh] overflow-y-auto transition-all duration-300 bg-[#fff] z-[3]`}
     >
-      <div className="w-full flex justify-end">
+      <div className="w-full flex justify-between">
+        <img
+          src="https://www.fablestreet.com/logo.svg"
+          className="w-[150px]"
+          alt=""
+        />
         <IoMdClose
-          className="text-[30px] m-2 cursor-pointer"
+          className="text-[30px] my-2 cursor-pointer"
           onClick={handleClick}
         />
       </div>
-      <div className="w-full p-2">
+      <div className="w-full ">
         {navLinks.map((list) => {
           return (
-            <p
-              key={list.id}
-              className="text-[18px] font-[500] my-3"
-              onClick={handleClick}
-            >
-              <NavLink to={list.to}>{list.title}</NavLink>
-            </p>
+            <MobileNavLinks key={list.id} {...list} handleClick={handleClick} />
           );
         })}
       </div>
@@ -51,32 +51,50 @@ export default MobileNav;
 const navLinks = [
   {
     id: 1,
-    title: "Home",
+    title: "Shop",
     to: "/",
+    children: [
+      { title: "Bestseller", to: "" },
+      { title: "Workwear", to: "" },
+      { title: "Livin Pants", to: "" },
+      { title: "Tops & Shirts", to: "" },
+      { title: "Dress", to: "" },
+      { title: "Trousers", to: "" },
+      { title: "Co-ords", to: "" },
+      { title: "Blazers", to: "" },
+      { title: "Tees", to: "" },
+      { title: "Jeans & Denims", to: "" },
+      { title: "Skirts, Skorts & Shorts", to: "" },
+      { title: "Plus Slize", to: "" },
+      { title: "Camisoles", to: "" },
+      { title: "Special Prices", to: "" },
+    ],
   },
   {
     id: 2,
-    title: "Category",
-    to: "/category",
+    title: "New",
+    to: "/",
+    children: [
+      { title: "Summer 2024", to: "" },
+      { title: "WorkwWhites", to: "" },
+      { title: "Modern Workwear", to: "" },
+      { title: "Livin Pants", to: "" },
+      { title: " View Allear", to: "" },
+    ],
   },
   {
     id: 3,
+    title: "Occasion",
+    to: "/",
+  },
+  {
+    id: 4,
     title: "About",
     to: "/about",
   },
   {
-    id: 4,
-    title: "Contact",
-    to: "/contact",
-  },
-  {
     id: 5,
-    title: "Blog",
-    to: "/blog",
-  },
-  {
-    id: 6,
-    title: "Account",
-    to: "/account",
+    title: "Help",
+    to: "/",
   },
 ];

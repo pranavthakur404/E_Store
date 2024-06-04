@@ -3,11 +3,23 @@ import { NavLink } from "react-router-dom";
 
 import Rating from "./Rating";
 
-const ProductCard = ({ img, title, offerPrice, total, price, offerText }) => {
+const ProductCard = ({
+  img,
+  title,
+  offerPrice,
+  total,
+  price,
+  offerText,
+  width,
+}) => {
   return (
-    <div className="w-[24%] mb-10">
+    <div className={`w-[${width}] mb-10 mx-1`}>
       <div className="relative overflow-hidden group">
-        <img src={img} alt="" className="w-[100%] h-[450px] my-0 mx-auto" />
+        <img
+          src={img}
+          alt=""
+          className="w-[100%] h-[300px] md:h-[400px] my-0 mx-auto"
+        />
       </div>
       <div className="flex py-2 justify-between items-center">
         <div>

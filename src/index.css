@@ -119,41 +119,38 @@ swiper-button-prev:after,
   color: white;
 }
 
-.best-seller-product-listing {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  justify-content: space-between;
-  row-gap: 25px;
+.homeOfferBanner {
+  background: url("https://www.snitch.co.in/cdn/shop/files/Wow50-web_1400x.webp?v=1711451977");
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
 }
 
-.category-button {
+.category-card {
+  position: relative;
+}
+
+.category-card:after {
+  content: "";
+  inset: 0;
   position: absolute;
-  left: 40%;
-  top: 40%;
-  text-align: center;
-  color: white;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.category-section img {
-  transition: 0.3s ease-in all;
+.navChild {
+  transition: 1s all ease-in;
 }
 
-.category-section:hover img {
-  transform: scale(1.1);
+.navChild.hideNavChild {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.testimonial-section {
+.best-seller-productContainer {
   display: grid;
-  grid-template-columns: 32% 32% 32%;
+  grid-template-columns: 24% 24% 24% 24%;
   justify-content: space-between;
-}
-
-.brand-logo-container {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-}
-.brand-logo-container img {
-  margin: 0 auto;
 }
 
 /* ############## ABOUT PAGE ######### */
@@ -201,12 +198,26 @@ swiper-button-prev:after,
   .main-logo {
     margin-left: 0%;
   }
+
+  .main-nav {
+    padding-block: 10px;
+  }
+
+  .homeOfferBanner {
+    height: 80vh;
+  }
 }
 
 @media (max-width: 911px) {
   .blog-mainContainer {
     grid-template-columns: 50% 50%;
     gap: 25px;
+  }
+
+  .best-seller-productContainer {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-between;
   }
 }
 
@@ -218,6 +229,22 @@ swiper-button-prev:after,
   .team-section {
     grid-template-columns: 45% 45%;
     gap: 20px;
+  }
+
+  .homeOfferBanner {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .best-seller-productContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+  }
+
+  .homeOfferBanner {
+    height: 40vh;
   }
 }
 
@@ -237,6 +264,11 @@ swiper-button-prev:after,
 @media (max-width: 460px) {
   .best-seller-product-listing {
     grid-template-columns: 100%;
+  }
+  .best-seller-productContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: space-between;
   }
 }
 

@@ -23,22 +23,24 @@ const MainNav = () => {
   };
 
   return (
-    <div className="w-full bg-[#fff] sticky top-0 shadow-xl z-[2]">
+    <div className="w-full bg-[#fff] sticky main-nav top-0 shadow-xl z-[2]">
       <Container>
         <div className="w-full py-1 flex justify-between items-center">
           <div>
-            <img
-              src="https://www.fablestreet.com/logo.svg"
-              className="w-[150px]"
-              alt=""
-            />
+            <NavLink to="/">
+              <img
+                src="https://www.fablestreet.com/logo.svg"
+                className="w-[150px]"
+                alt=""
+              />
+            </NavLink>
           </div>
 
           <div className="mainNav">
             <Navlinks />
           </div>
 
-          <div>
+          <div className="hidden md:block">
             <form
               action="#"
               className="border border-gray-300 rounded flex items-center px-2"
@@ -52,7 +54,7 @@ const MainNav = () => {
             </form>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <div className="relative">
               <IoCartOutline className="cursor-pointer text-[22px]" />
               <span className="absolute bg-gray-700 rounded-[100px] text-[12px] w-[20px] h-[20px] flex justify-center items-center top-[-17px] right-[-5px] text-white">

@@ -12,9 +12,9 @@ const BestSeller = () => {
             Don't miss out Top Selling Styles
           </p>
         </div>
-        <div className="w-full flex justify-between flex-wrap mt-10">
+        <div className="w-full  best-seller-productContainer  mt-10">
           {data.map((list) => {
-            return <ProductCard key={list.id} {...list} />;
+            return <ProductCard key={list.id} {...list} width={100} />;
           })}
         </div>
         <button className="bg-transparent block  w-[250px] rounded-xl text-gray-900  border-2 border-gray-900 mt-5 hover:bg-gray-900 hover:text-[#fff] transition px-3 py-2  text-[14px] font-[500] my-0 mx-auto">
