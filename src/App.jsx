@@ -19,6 +19,7 @@ const About = React.lazy(() => import("./pages/About"));
 const Contact = React.lazy(() => import("./pages/ContactUs"));
 const Login = React.lazy(() => import("./pages/Login"));
 const Signup = React.lazy(() => import("./pages/Signup"));
+const ProductInner = React.lazy(() => import("./pages/ProductInner"));
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <Products />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/product/:id",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <ProductInner />
           </Suspense>
         ),
       },

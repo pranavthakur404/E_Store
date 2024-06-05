@@ -4,10 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 /* custom css */
 
 * {
   font-family: "Source Sans 3", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* global */
@@ -153,6 +169,13 @@ swiper-button-prev:after,
   justify-content: space-between;
 }
 
+.main-product-listing-container {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
 /* ############## ABOUT PAGE ######### */
 .team-section {
   display: grid;
@@ -219,6 +242,10 @@ swiper-button-prev:after,
     grid-template-columns: 33% 33% 33%;
     justify-content: space-between;
   }
+
+  .main-product-listing-container {
+    grid-template-columns: 49% 49%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -269,6 +296,10 @@ swiper-button-prev:after,
     display: grid;
     grid-template-columns: 100%;
     justify-content: space-between;
+  }
+
+  .main-product-listing-container {
+    grid-template-columns: 100%;
   }
 }
 

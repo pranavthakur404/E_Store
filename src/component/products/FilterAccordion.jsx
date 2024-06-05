@@ -4,12 +4,14 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import RangeSlider from "react-range-slider-input";
-import "react-range-slider-input/dist/style.css";
 
 const MultipleAccordions = () => {
   const [expanded, setExpanded] = useState(null);
-  const [value, setValue] = useState([30, 60]);
+  const [value, setValue] = useState(50);
+
+  const handleRange = (e) => {
+    setValue(e.target.value);
+  };
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : null);
@@ -148,7 +150,20 @@ const MultipleAccordions = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <RangeSlider min={0} max={100} step={5} value={value} />
+            <input
+              id="range-slider"
+              type="range"
+              min="0"
+              step={100}
+              max="100000"
+              value={value}
+              onChange={handleRange}
+              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+              style={{
+                accentColor: "#6366F1", // Tailwind indigo-500
+              }}
+            />
+            <span>{`< ${value}`}</span>
           </Typography>
         </AccordionDetails>
       </Accordion>

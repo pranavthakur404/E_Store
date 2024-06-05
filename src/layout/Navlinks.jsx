@@ -35,21 +35,21 @@ const Navlinks = () => {
           <div className="absolute main-child-nav z-[2] bg-[#fff] min-w-max py-5 px-5 gap-10 top-[50px] shadow-xl">
             <div className="mr-10">
               <p className="text-[13px] my-2">
-                <NavLink to="/products?summer-2024">Summer 2024</NavLink>
+                <NavLink to="/products?type=Summer 2024">Summer 2024</NavLink>
               </p>
               <p className="text-[13px] my-2">
-                <NavLink to="/products?whites">Whites</NavLink>
+                <NavLink to="/products?type=whites">Whites</NavLink>
               </p>
               <p className="text-[13px] my-2">
-                <NavLink to="/products?modern-workwear">
+                <NavLink to="/products?type=Modern Workwear">
                   Modern Workwear
                 </NavLink>
               </p>
               <p className="text-[13px] my-2">
-                <NavLink to="/products?livin-paints">Livin Pants</NavLink>
+                <NavLink to="/products?type=Livin-Paints">Livin Pants</NavLink>
               </p>
               <p className="text-[13px] my-2">
-                <NavLink to="/products?All">View All</NavLink>
+                <NavLink to="/products?type=All">View All</NavLink>
               </p>
             </div>
           </div>

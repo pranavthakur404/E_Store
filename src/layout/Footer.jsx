@@ -10,7 +10,9 @@ const Footer = () => {
       <Container>
         <div className="flex justify-between flex-wrap my-[50px]">
           <div className="sm:w-[50%] md:w-[40%] text-center sm:text-left pr-5 mb-8 md:mb-0">
-            <h3 className="text-[20px] font-bold">Shome</h3>
+            <h3 className="text-[20px] font-bold">
+              <img src="https://www.fablestreet.com/logo.svg" className="w-[150px]" alt="" />
+            </h3>
             <p className="text-[14px] my-5 text-[#262b2c]">
               Praesent eget tortor sit risus egestas nulla pharetra ornare quis
               bibendum est bibendum sapien proin nascetur
