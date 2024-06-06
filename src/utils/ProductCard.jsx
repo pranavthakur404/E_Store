@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { GrCart } from "react-icons/gr";
+import { IoIosHeartEmpty } from "react-icons/io";
 
 const ProductCard = ({
   img,
@@ -12,13 +14,23 @@ const ProductCard = ({
 }) => {
   return (
     <NavLink to="/product/123">
-      <div className={`w-[${width}] mb-10 mx-1`}>
-        <div className="relative overflow-hidden group">
+      <div className={`w-[${width}] mb-10 mx-1  relative`}>
+        <div className="relative overflow-hidden productCardImg group">
           <img
             src={img}
             alt=""
             className="w-[100%] productImage h-[300px] md:h-[350px] my-0 mx-auto rounded-lg"
           />
+          <span className="productOverlay"></span>
+          <div className="flotingContainer text-[18px] text-white p-2">
+            <button className="py-1 px-3 bg-white rounded shadow-xl">
+              <GrCart className="text-[#000]" />
+            </button>
+            <br />
+            <button className="py-1 px-3 bg-white rounded">
+              <IoIosHeartEmpty className="text-[#000] shadow-xl" />
+            </button>
+          </div>
         </div>
         <div className="flex py-2 justify-between items-center">
           <div>

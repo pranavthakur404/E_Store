@@ -21,7 +21,7 @@ const Overlay = () => {
 
   return createPortal(
     <div
-      className="fixed inset-0 bg-[rgba(0,0,0,0.9)] z-[3]"
+      className="fixed inset-0 bg-[rgba(0,0,0,0.9)] z-[4]"
       onClick={handleClick}
     ></div>,
     document.getElementById("overlay")

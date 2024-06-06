@@ -12,7 +12,7 @@ const InnerBanners = ({ text, subText }) => {
         backgroundAttachment: "fixed", // Optional: Adjust the background position
         // You can add more background-related styles as needed
       }}
-      className="w-full flex justify-center items-center h-[250px] md:h-[300px] text-center p-5"
+      className="w-full flex justify-center items-center  md:h-[250px] text-center p-5"
     >
       <div className="w-[95%] sm:w-[75%] md:w-[50%] py-5">
         <p className="text-[35px] sm:text-[40px] font-bold text-[#262b2c]">

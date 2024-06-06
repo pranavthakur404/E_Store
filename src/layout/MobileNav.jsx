@@ -22,7 +22,7 @@ const MobileNav = () => {
     <div
       className={`w-[300px] fixed px-2 ${
         isMobileOpen ? "left-0" : "left-[-300px]"
-      } top-0 left-0 h-[100vh] overflow-y-auto transition-all duration-300 bg-[#fff] z-[3]`}
+      } top-0 left-0 h-[100vh] overflow-y-auto transition-all duration-300 bg-[#fff] z-[5]`}
     >
       <div className="w-full flex justify-between">
         <img

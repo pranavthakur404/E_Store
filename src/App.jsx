@@ -11,15 +11,17 @@ import { Provider } from "react-redux";
 import store from "./store";
 import Root from "./root/Root";
 import Loading from "./utils/Loading";
+
 const Home = React.lazy(() => import("./pages/Home"));
 const Products = React.lazy(() => import("./pages/Products"));
-
-// Bellow to be changed
+const ProductInner = React.lazy(() => import("./pages/ProductInner"));
+const Favourite = React.lazy(() => import("./pages/Favourite.jsx"));
+const Cart = React.lazy(() => import("./pages/Cart.jsx"));
 const About = React.lazy(() => import("./pages/About"));
 const Contact = React.lazy(() => import("./pages/ContactUs"));
 const Login = React.lazy(() => import("./pages/Login"));
 const Signup = React.lazy(() => import("./pages/Signup"));
-const ProductInner = React.lazy(() => import("./pages/ProductInner"));
+const Checkout = React.lazy(() => import("./pages/Checkout.jsx"));
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,30 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loading />}>
             <ProductInner />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/wishlist",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Favourite />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/cart",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Cart />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/checkout",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Checkout />
           </Suspense>
         ),
       },

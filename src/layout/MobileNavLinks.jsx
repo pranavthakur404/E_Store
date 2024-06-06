@@ -22,18 +22,18 @@ const MobileNavLinks = ({ title, to, children, handleClick }) => {
         )}
       </span>
       {children && (
-        <div className={`navChild ${show ? "" : "hideNavChild"}`}>
+        <span className={`navChild ${show ? "" : "hideNavChild"} block`}>
           {children &&
-            children.map((childLinks) => {
+            children.map((childLinks, index) => {
               return (
-                <p className="text-[14px]">
+                <span key={index} className="text-[14px] my-3 font-[400] block">
                   <NavLink to={childLinks.to} onClick={handleClick}>
                     {childLinks.title}
                   </NavLink>
-                </p>
+                </span>
               );
             })}
-        </div>
+        </span>
       )}
     </p>
   );

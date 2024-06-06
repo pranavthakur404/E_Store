@@ -14,6 +14,15 @@ import { NavLink } from "react-router-dom";
 
 const MainNav = () => {
   const dispatch = useDispatch();
+
+  const cartData = useSelector((state) => {
+    return state.cart;
+  });
+
+  const wishListData = useSelector((state) => {
+    return state.wishList;
+  });
+
   const toggleOverlay = useSelector((state) => {
     return state.overlay.isOpen;
   });
@@ -23,7 +32,7 @@ const MainNav = () => {
   };
 
   return (
-    <div className="w-full bg-[#fff] sticky main-nav top-0 shadow-xl z-[2]">
+    <div className="w-full bg-[#fff] sticky main-nav top-0 shadow-xl z-[3]">
       <Container>
         <div className="w-full py-1 flex justify-between items-center">
           <div>
@@ -56,12 +65,23 @@ const MainNav = () => {
 
           <div className="flex items-center gap-2 md:gap-4">
             <div className="relative">
-              <IoCartOutline className="cursor-pointer text-[22px]" />
+              <NavLink to="/cart">
+                <IoCartOutline className="cursor-pointer text-[20px]" />
+              </NavLink>
               <span className="absolute bg-gray-700 rounded-[100px] text-[12px] w-[20px] h-[20px] flex justify-center items-center top-[-17px] right-[-5px] text-white">
-                10
+                {cartData.length}
               </span>
             </div>
-            <FaRegHeart className="text-[20px]" />
+
+            <div className="relative">
+              <NavLink to="/wishlist">
+                <FaRegHeart className="cursor-pointer text-[20px]" />
+              </NavLink>
+              <span className="absolute bg-gray-700 rounded-[100px] text-[12px] w-[20px] h-[20px] flex justify-center items-center top-[-18px] right-[-5px] text-white">
+                {wishListData.length}
+              </span>
+            </div>
+
             <span className="">
               <NavLink to={"/login"}>
                 <FaRegUser className="text-[18px]" />

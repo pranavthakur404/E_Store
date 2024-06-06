@@ -38,7 +38,7 @@ const Navlinks = () => {
                 <NavLink to="/products?type=Summer 2024">Summer 2024</NavLink>
               </p>
               <p className="text-[13px] my-2">
-                <NavLink to="/products?type=whites">Whites</NavLink>
+                <NavLink to="/products?type=Whites">Whites</NavLink>
               </p>
               <p className="text-[13px] my-2">
                 <NavLink to="/products?type=Modern Workwear">

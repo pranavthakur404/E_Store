@@ -11,7 +11,11 @@ const Footer = () => {
         <div className="flex justify-between flex-wrap my-[50px]">
           <div className="sm:w-[50%] md:w-[40%] text-center sm:text-left pr-5 mb-8 md:mb-0">
             <h3 className="text-[20px] font-bold">
-              <img src="https://www.fablestreet.com/logo.svg" className="w-[150px]" alt="" />
+              <img
+                src="https://www.fablestreet.com/logo.svg"
+                className="w-[150px]"
+                alt=""
+              />
             </h3>
             <p className="text-[14px] my-5 text-[#262b2c]">
               Praesent eget tortor sit risus egestas nulla pharetra ornare quis
@@ -23,7 +27,9 @@ const Footer = () => {
             <h3 className="text-[16px] font-bold">Shop</h3>
             {shop.map((list) => {
               return (
-                <p className="text-[14px] my-2 text-[#262b2c]">{list.title}</p>
+                <p key={list.id} className="text-[14px] my-2 text-[#262b2c]">
+                  {list.title}
+                </p>
               );
             })}
           </div>
@@ -31,7 +37,9 @@ const Footer = () => {
             <h3 className="text-[16px] font-bold">About</h3>
             {about.map((list) => {
               return (
-                <p className="text-[14px] my-2 text-[#262b2c]">{list.title}</p>
+                <p key={list.id} className="text-[14px] my-2 text-[#262b2c]">
+                  {list.title}
+                </p>
               );
             })}
           </div>
@@ -39,7 +47,9 @@ const Footer = () => {
             <h3 className="text-[16px] font-bold">Need Help</h3>
             {needHelp.map((list) => {
               return (
-                <p className="text-[14px] my-2 text-[#262b2c]">{list.title}</p>
+                <p key={list.id} className="text-[14px] my-2 text-[#262b2c]">
+                  {list.title}
+                </p>
               );
             })}
           </div>

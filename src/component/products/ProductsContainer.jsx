@@ -1,17 +1,13 @@
 import React, { useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
 
 import ProductCard from "../../utils/ProductCard";
 
 const ProductsContainer = () => {
-  const [searchParams] = useSearchParams();
   const [filter, setFilterBy] = useState("");
 
   return (
     <div className="w-full">
-      <p className="text-center text-[25px]">{searchParams.get("type")}</p>
       <div className="w-full flex justify-end">
         <div className="w-[150px]">
           <label
@@ -66,7 +62,7 @@ const ProductsContainer = () => {
           </a>
           <a
             href="#"
-            class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
+            class="relative inline-flex items-center px-4 py-2 border rounded-r-md border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50"
           >
             Next
           </a>

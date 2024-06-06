@@ -60,6 +60,30 @@ body {
   color: #262b2c;
 }
 
+.productOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  scale: 0;
+}
+
+.productCardImg .flotingContainer {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  scale: 0;
+  transition: all 0.5s;
+}
+
+.productCardImg:hover .productOverlay {
+  scale: 1;
+}
+
+.productCardImg:hover .flotingContainer {
+  scale: 1;
+}
+
 /* ######### Header ############ */
 .main-navigation-links::after {
   content: "";
@@ -176,6 +200,15 @@ swiper-button-prev:after,
   margin-top: 20px;
 }
 
+/* ############# checkout ######### */
+.checkoutContainer {
+  width: 80%;
+}
+
+.checkoutContainer .checkoutBox {
+  width: 50%;
+}
+
 /* ############## ABOUT PAGE ######### */
 .team-section {
   display: grid;
@@ -229,6 +262,10 @@ swiper-button-prev:after,
   .homeOfferBanner {
     height: 80vh;
   }
+
+  .checkoutContainer {
+    width: 100%;
+  }
 }
 
 @media (max-width: 911px) {
@@ -245,6 +282,16 @@ swiper-button-prev:after,
 
   .main-product-listing-container {
     grid-template-columns: 49% 49%;
+  }
+}
+
+@media (max-width: 799px) {
+  .checkoutContainer {
+    flex-wrap: wrap;
+  }
+
+  .checkoutContainer .checkoutBox {
+    width: 100%;
   }
 }
 
