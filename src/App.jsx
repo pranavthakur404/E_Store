@@ -1,4 +1,5 @@
 import React from "react";
+import { Toaster } from "react-hot-toast";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -22,6 +23,7 @@ const Contact = React.lazy(() => import("./pages/ContactUs"));
 const Login = React.lazy(() => import("./pages/Login"));
 const Signup = React.lazy(() => import("./pages/Signup"));
 const Checkout = React.lazy(() => import("./pages/Checkout.jsx"));
+const Account = React.lazy(() => import("./pages/Account.jsx"));
 
 const router = createBrowserRouter([
   {
@@ -77,6 +79,14 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/account",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Account />
+          </Suspense>
+        ),
+      },
+      {
         path: "about",
         element: (
           <Suspense fallback={<Loading />}>
@@ -115,6 +125,7 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <Provider store={store}>
+      <Toaster />
       <RouterProvider router={router} />
     </Provider>
   );

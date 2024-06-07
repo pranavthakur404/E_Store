@@ -83,7 +83,7 @@ const MainNav = () => {
             </div>
 
             <span className="">
-              <NavLink to={"/login"}>
+              <NavLink to={"/account"}>
                 <FaRegUser className="text-[18px]" />
               </NavLink>
             </span>

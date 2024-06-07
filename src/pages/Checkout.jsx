@@ -7,8 +7,7 @@ import BillInfo from "../component/checkout/BillInfo";
 
 const Checkout = () => {
   return (
-    <div className="w-full">
-      <InnerBanners text={"Checkout"} />
+    <div className="w-full py-10">
       <Container>
         <div className="checkoutContainer my-0 mx-auto flex justify-between pb-10 py-3">
           {/* billing details */}

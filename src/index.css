@@ -239,6 +239,27 @@ swiper-button-prev:after,
   bottom: -5px;
 }
 
+/* ########## Account ########### */
+
+.defaultAddressCard {
+  overflow: hidden;
+}
+
+.defaultAddressCard:after {
+  content: "Default";
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  background: black;
+  font-size: 12px;
+  padding: 5px 20px;
+  top: 10px;
+  left: -10px;
+  transform: skew(-20deg); /* Adjusted skew for better appearance */
+  perspective: 100px;
+  z-index: 10;
+}
+
 /* ########### Media query ########## */
 
 @media (max-width: 1024px) {

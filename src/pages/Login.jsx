@@ -1,6 +1,5 @@
 import React from "react";
 
-import InnerBanners from "../utils/InnerBanners";
 import Container from "../utils/Container";
 import { NavLink } from "react-router-dom";
 
@@ -11,7 +10,6 @@ const Login = () => {
 
   return (
     <div className="w-full">
-      <InnerBanners text={"Login"} />
       <Container>
         <form
           className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md my-[100px]"
